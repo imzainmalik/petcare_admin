@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('avatar')->nullable();
             $table->string('address_home')->nullable();
             $table->string('address_work')->nullable();
+            $table->boolean('status')->default(1);
             $table->string('stripe_id')->nullable();
             $table->timestamp('email_verified_at')->nullable();            
             $table->rememberToken();
