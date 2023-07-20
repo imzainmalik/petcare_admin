@@ -16,11 +16,11 @@
 </head>
 
 <body>
-    @if (Auth::user()->acc_type = 1)
+    @if (Auth::user()->acc_type == 1)
         @include('include.admin-sidenav')
-    @elseif (Auth::user()->acc_type = 2)
+    @elseif (Auth::user()->acc_type == 2)
         @include('include.sitter-sidenav')
-    @elseif (Auth::user()->acc_type = 0)
+    @elseif (Auth::user()->acc_type == 0)
         @include('include.user-sidenav')
     @endif
 

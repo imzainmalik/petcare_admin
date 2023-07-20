@@ -11,12 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('pets', function (Blueprint $table) {
+        Schema::create('services', function (Blueprint $table) {
             $table->id();
             $table->string('name')->nullable();
-            $table->boolean('is_acitve')->nullable();
-            $table->foreignId('service_id')->nullable();
-            $table->foreignId('category_id')->nullable();
+            $table->longText('description')->nullable();
+            $table->boolean('is_available')->default(1);
             $table->timestamps();
         });
     }
@@ -26,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('pets');
+        Schema::dropIfExists('services');
     }
 };
