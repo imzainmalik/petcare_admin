@@ -18,9 +18,11 @@ return new class extends Migration
             $table->string('password');
             $table->integer('acc_type')->comment('user=0,admin=1,sitter=2')->default(0);
             $table->string('gender')->nullable();
-            $table->string('phone')->nullable();
+            $table->string('phone_number_home')->nullable();
+            $table->string('phone_number_work')->nullable();
             $table->string('avatar')->nullable();
-            $table->string('address')->nullable();
+            $table->string('address_home')->nullable();
+            $table->string('address_work')->nullable();
             $table->string('stripe_id')->nullable();
             $table->timestamp('email_verified_at')->nullable();            
             $table->rememberToken();
