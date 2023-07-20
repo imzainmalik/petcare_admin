@@ -32,6 +32,10 @@ Route::group(['middleware' => ['admin']], function () {
     Route::get('/admin/pets/create', [App\Http\Controllers\AdminController::class, 'pets_add'])->name('admin.pets_add');
     Route::get('/admin/remove_pet/{pet_id}', [App\Http\Controllers\AdminController::class, 'remove_pet'])->name('admin.remove_pet');
     Route::post('/admin/pet_create', [App\Http\Controllers\AdminController::class, 'pet_create'])->name('admin.pet_create');
+    Route::get('/admin/sitters', [App\Http\Controllers\AdminController::class, 'sitters'])->name('admin.sitters');
+    Route::get('/admin/sitters/create', [App\Http\Controllers\AdminController::class, 'create_sitters'])->name('admin.create_sitters');
+    Route::post('/admin/sitters/sitter_create', [App\Http\Controllers\AdminController::class, 'sitter_create'])->name('admin.sitter_create');
+    Route::get('/admin/schedule', [App\Http\Controllers\AdminController::class, 'schedule'])->name('admin.schedule');
 
 })->middleware('verified');
 
