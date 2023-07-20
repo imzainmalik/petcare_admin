@@ -8,6 +8,6 @@ class UserController extends Controller
 {
     
     public function index(){
-        abort(503);
+        return view('user.home');
     }
 }
