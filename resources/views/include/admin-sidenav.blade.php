@@ -40,13 +40,13 @@
                         </a> 
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#navbar-forms">
+                        <a class="nav-link" href="{{route('admin.sitters')}}">
                             <i class="ni ni-single-copy-04 text-pink"></i>
                             <span class="nav-link-text">Sitters</span>
                         </a> 
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#navbar-tables">
+                        <a class="nav-link" href="{{route('admin.schedule')}}">
                             <i class="ni ni-align-left-2 text-default"></i>
                             <span class="nav-link-text">Schedule Settings</span>
                         </a> 
