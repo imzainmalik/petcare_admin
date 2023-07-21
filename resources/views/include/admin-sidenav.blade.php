@@ -52,7 +52,13 @@
                         </a> 
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#navbar-tables">
+                        <a class="nav-link" href="{{route('admin.category')}}">
+                            <i class="ni ni-chart-pie-35 text-infot"></i>
+                            <span class="nav-link-text">Pet Types</span>
+                        </a> 
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('admin.services')}}">
                             <i class="ni ni-chart-pie-35 text-infot"></i>
                             <span class="nav-link-text">Services</span>
                         </a> 

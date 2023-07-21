@@ -24,7 +24,8 @@ return new class extends Migration
             $table->string('address_home')->nullable();
             $table->string('address_work')->nullable();
             $table->string('stripe_id')->nullable();
-            $table->timestamp('email_verified_at')->nullable();            
+            $table->timestamp('email_verified_at')->nullable();   
+            $table->integer('account_status')->comment('0=OnHold, 1=Active, 2=Suspended');       
             $table->rememberToken();
             $table->timestamps();
         });
