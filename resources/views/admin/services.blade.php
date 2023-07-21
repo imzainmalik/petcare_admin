@@ -1,26 +1,27 @@
 @extends('layouts.app')
 @section('content')
-    
     <div class="header pb-6">
         <div class="container-fluid">
             <div class="header-body">
                 <div class="row align-items-center py-4">
                     <div class="col-lg-6 col-7">
-                        <h6 class="h2 d-inline-block mb-0">Pets</h6>
+                        <h6 class="h2 d-inline-block mb-0">Services</h6>
                         <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
                             <ol class="breadcrumb breadcrumb-links">
                                 <li class="breadcrumb-item"><a href="{{ route('admin.home') }}">Dashboards</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Pets</li>
+                                <li class="breadcrumb-item active" aria-current="page">Services</li>
                             </ol>
                         </nav>
                     </div>
                     <div class="col-lg-6 col-5 text-right">
-                        <a href="{{ route('admin.pets_add') }}" class="btn btn-sm btn-primary">Create New Pet</a>
+                        <a href="{{ route('admin.create_services') }}" class="btn btn-sm btn-primary">Create New
+                            Services</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
 
     <div class="container-fluid mt--6">
         <div class="row">
@@ -29,22 +30,19 @@
                     <table id="datatable-buttons" class="table table-flush">
                         <thead>
                             <tr>
-                                <th>Pet Name</th>
-                                <th>Pet Owner</th>
+                                <th>Name</th>
+                                <th>Description</th>
                                 <th>CreatedAt</th>
                                 <th>Actions</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($pets as $pet)
-                                @php
-                                    $client = App\Models\User::where('id', $pet->client_id)->first();
-                                @endphp
+                            @foreach ($services as $service) 
                                 <tr role="row">
-                                    <td>{{ $pet->pet_name }}</td>
-                                    <td>{{ $client->email }}</td>
-                                    <td>{{ $pet->created_at->diffForHumans() }}</td>
-                                    <td><a href="{{ route('admin.remove_pet', ['pet_id' => $pet->id]) }}"
+                                    <td>{{ $service->name }}</td>
+                                    <td>{{ $service->description }}</td>
+                                    <td>{{ $service->created_at->diffForHumans() }}</td>
+                                    <td><a href="{{ route('admin.destroy_service', ['service_id' => $service->id]) }}"
                                             class="btn btn-danger">Remove</a></td>
                                 </tr>
                             @endforeach

@@ -17,8 +17,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/home', function () {
+    return redirect('login');
 });
 
 Auth::routes();
@@ -40,7 +40,19 @@ Route::group(['middleware' => ['admin']], function () {
     Route::post('/admin/sitters/sitter_create', [AdminController::class, 'sitter_create'])->name('admin.sitter_create');
     Route::get('/admin/schedule', [AdminController::class, 'schedule'])->name('admin.schedule');
 
+    Route::get('/admin/pet-types', [App\Http\Controllers\AdminController::class, 'category'])->name('admin.category');
+    Route::get('/admin/pet-types/create', [App\Http\Controllers\AdminController::class, 'category_create'])->name('admin.category_create');
+    Route::post('/admin/pet-types/category_store', [App\Http\Controllers\AdminController::class, 'category_store'])->name('admin.category_store');
+    Route::get('/admin/pet-types/destroy/{type_id}', [App\Http\Controllers\AdminController::class, 'change_status'])->name('admin.change_status');
+    Route::post('/admin/pet-types/update/{type_id}', [App\Http\Controllers\AdminController::class, 'categpry_update'])->name('admin.categpry_update');
+
+    Route::get('/admin/services', [App\Http\Controllers\AdminController::class, 'services'])->name('admin.services');
+    Route::get('/admin/services/create', [App\Http\Controllers\AdminController::class, 'create_services'])->name('admin.create_services');
+    Route::post('/admin/services/store', [App\Http\Controllers\AdminController::class, 'service_store'])->name('admin.service_store');
+    Route::get('/admin/services/destroy_service/{service_id}', [App\Http\Controllers\AdminController::class, 'destroy_service'])->name('admin.destroy_service');
+
 })->middleware('verified');
+
 
 Route::group(['middleware' => ['user']], function () {
    
