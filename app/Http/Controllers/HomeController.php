@@ -55,4 +55,18 @@ class HomeController extends Controller
         }
     }
 
+    public function profile()
+    {
+        return view('user.profile');
+    }
+    public function edit()
+    {
+        return view('user.edit-profile');
+    }
+    public function update()
+    {
+        dd('abcd');
+    }
+    
+
 }

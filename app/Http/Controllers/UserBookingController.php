@@ -12,8 +12,9 @@ class UserBookingController extends Controller
      */
     public function index()
     {
+        // dd('hello');
         $userBooking = Booking::all();
-        return view('user.index',get_defined_vars());
+        return view('user.booking.index',get_defined_vars());
     }
 
     /**

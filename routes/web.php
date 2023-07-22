@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserBookingController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
@@ -22,7 +23,12 @@ Route::get('/home', function () {
 });
 
 Auth::routes();
-Route::get('/check_acccount_type', [App\Http\Controllers\HomeController::class, 'check_acccount_type'])->name('check_acccount_type');
+//profile start
+Route::get('/profile', [HomeController::class, 'profile'])->name('profile');
+Route::get('/edit-profile', [HomeController::class, 'edit'])->name('edit.profile');
+Route::post('/update-profile', [HomeController::class, 'update'])->name('update.profile');
+//profile end
+Route::get('/check_acccount_type', [HomeController::class, 'check_acccount_type'])->name('check_acccount_type');
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
@@ -57,7 +63,8 @@ Route::group(['middleware' => ['admin']], function () {
 Route::group(['middleware' => ['user']], function () {
    
     Route::resource('/user-booking', UserBookingController::class);
-    Route::get('home', [UserController::class, 'home'])->name('user.home');
+    Route::get('/user/home', [UserController::class, 'home'])->name('user.home');
+    
 
 
     
