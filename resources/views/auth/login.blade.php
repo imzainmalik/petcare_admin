@@ -1,12 +1,5 @@
-<link rel="icon" href="{{ asset('assets/img/brand/favicon.png') }}" type="image/png">
+@include('include.styles')
 
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
-
-<link rel="stylesheet" href="{{ asset('assets/vendor/nucleo/css/nucleo.css') }}" type="text/css">
-<link rel="stylesheet" href="{{ asset('assets/vendor/%40fortawesome/fontawesome-free/css/all.min.css') }}"
-    type="text/css">
-
-<link rel="stylesheet" href="{{ asset('assets/css/argon.min23cd.css') }}" type="text/css">
 
 <style>
     .invalid-feedback {

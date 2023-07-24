@@ -32,6 +32,8 @@
                             <tr>
                                 <th>Name</th>
                                 <th>Description</th>
+                                <th>Service Type</th>
+                                <th>Price</th>
                                 <th>CreatedAt</th>
                                 <th>Actions</th>
                             </tr>
@@ -40,7 +42,15 @@
                             @foreach ($services as $service) 
                                 <tr role="row">
                                     <td>{{ $service->name }}</td>
-                                    <td>{{ $service->description }}</td>
+                                    <td>{{ substr($service->description, 0 ,80) }}</td>
+                                    <td>
+                                        @if($service->service_for_day_hour == 0)
+                                            <div class="badge badge-primary">Hourly</div>
+                                        @else 
+                                        <div class="badge badge-primary">Day</div>
+                                        @endif 
+                                    </td>
+                                    <td>${{$service->price}}.00</td>
                                     <td>{{ $service->created_at->diffForHumans() }}</td>
                                     <td><a href="{{ route('admin.destroy_service', ['service_id' => $service->id]) }}"
                                             class="btn btn-danger">Remove</a></td>

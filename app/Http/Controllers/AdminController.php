@@ -196,6 +196,8 @@ class AdminController extends Controller
         $services = new Service;
         $services->name = $request->name;
         $services->description = $request->description;
+        $services->service_for_day_hour = $request->service_for_day_hour;
+        $services->price = $request->price;
         $services->save();
         return redirect('admin/services')->with('success', 'Service created successfully');
 

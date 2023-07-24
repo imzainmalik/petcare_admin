@@ -30,11 +30,27 @@
                 <form action="{{route('admin.service_store')}}" method="post">
                     @csrf
                     <div class="row">
-                        <div class="col-md-12">
+                        <div class="col-md-4">
                             <div class="form-group">
                                 <label class="form-control-label" for="example3cols1Input">Name</label>
-                                <input type="text" name="name" class="form-control" id="example3cols1Input"
+                                <input required type="text" name="name" class="form-control" id="example3cols1Input"
                                     placeholder="Name">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="form-control-label" for="example3cols1Input">Select Service Type</label>
+                                <select required class="form-control" name="service_for_day_hour" id="">
+                                    <option value="0">Hourly</option>
+                                    <option value="1">Day</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="form-control-label" for="example3cols1Input">Service Price</label>
+                                <input required type="number" name="price" class="form-control" id="example3cols1Input"
+                                    placeholder="Service Price">
                             </div>
                         </div>
                     </div>
@@ -42,7 +58,7 @@
                         <div class="col-sm-12 col-md-12">
                             <div class="form-group">
                                 <label class="form-control-label" for="example4cols1Input">Description</label>
-                                <textarea type="text" class="form-control" name="description" placeholder="Description"></textarea>
+                                <textarea required type="text" class="form-control" name="description" placeholder="Description"></textarea>
                             </div>
                         </div>
                     </div> 
