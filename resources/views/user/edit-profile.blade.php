@@ -13,6 +13,7 @@
                     <p class="text-white mt-0 mb-5">This is your edit profile page. You can update your name, address and
                         email here</p>
                     {{-- <a href="{{route('edit.profile')}}" class="btn btn-neutral">Edit profile</a> --}}
+                    @include('partial.errors')
                 </div>
             </div>
         </div>
@@ -232,7 +233,8 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <form action="{{ route('update.profile') }}" method="POST">
+                        <form action="{{ route('update.profile') }}" method="POST" enctype="multipart/form-data">
+                            
                             @csrf
                             <h6 class="heading-small text-muted mb-4">My information</h6>
                             <div class="pl-lg-4">
@@ -248,22 +250,22 @@
                                         <div class="form-group">
                                             <label class="form-control-label" for="input-email">Email address</label>
                                             <input type="email" id="input-email" class="form-control" name="email"
-                                                placeholder="jesse@example.com">
+                                                placeholder="jesse@example.com" value="{{auth()->user()->email}}">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <div class="form-group">
-                                            <label class="form-control-label" for="input-address">Home Address</label>
-                                            <input id="input-address" class="form-control" placeholder="Home Address"
+                                            <label class="form-control-label" for="home-address">Home Address</label>
+                                            <input id="home-address" class="form-control" placeholder="Home Address"
                                                 value="{{auth()->user()->address_home}}" type="text" name="address_home">
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="form-group">
-                                            <label class="form-control-label" for="input-address">Work Address</label>
-                                            <input id="input-address" class="form-control" placeholder="Work Address"
+                                            <label class="form-control-label" for="work-address">Work Address</label>
+                                            <input id="work-address" class="form-control" placeholder="Work Address"
                                                 value="{{auth()->user()->address_work}}" type="text" name="address_work">
                                         </div>
                                     </div>
@@ -281,6 +283,14 @@
                                             <label class="form-control-label" for="input-phone_number">Work Phone Number</label>
                                             <input id="input-phone_number" class="form-control" placeholder="Work Phone Number"
                                                 value="{{auth()->user()->phone_number_work}}" type="text" name="phone_number_work">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="avatar">Profile Image</label>
+                                            <input id="avatar" class="form-control" type="file" name="avatar">
                                         </div>
                                     </div>
                                 </div>

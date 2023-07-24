@@ -9,11 +9,12 @@
         <div class="container-fluid d-flex align-items-center">
             <div class="row">
                 <div class="col-lg-7 col-md-10">
-                    <h1 class="display-2 text-white">Hello {{auth()->user()->name}}</h1>
+                    <h1 class="display-2 text-white">Hello {{ auth()->user()->name }}</h1>
                     <p class="text-white mt-0 mb-5">This is your profile page. You can see the progress you've made with your
                         work and manage your projects or assigned tasks</p>
-                    <a href="{{route('edit.profile')}}" class="btn btn-neutral">Edit profile</a>
+                    <a href="{{ route('edit.profile') }}" class="btn btn-neutral">Edit profile</a>
                 </div>
+                {{-- @include('partial.successMessage') --}}
             </div>
         </div>
     </div>
@@ -27,18 +28,18 @@
                         <div class="col-lg-3 order-lg-2">
                             <div class="card-profile-image">
                                 <a href="#">
-                                    <img src="../../assets/img/theme/team-4.jpg" class="rounded-circle">
+                                    <img src="{{ asset('images/' . auth()->user()->avatar) }}" class="rounded-circle" width="100">
                                 </a>
                             </div>
                         </div>
                     </div>
-                    <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
+                    {{-- <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
                         <div class="d-flex justify-content-between">
                             <a href="#" class="btn btn-sm btn-info  mr-4 ">Connect</a>
                             <a href="#" class="btn btn-sm btn-default float-right">Message</a>
                         </div>
-                    </div>
-                    <div class="card-body pt-0">
+                    </div> --}}
+                    <div class="card-body ">
                         {{-- <div class="row">
                             <div class="col">
                                 <div class="card-profile-stats d-flex justify-content-center">
@@ -57,18 +58,21 @@
                                 </div>
                             </div>
                         </div> --}}
-                        <div class="text-center">
+                        <div class="text-center pt-5">
                             <h5 class="h3">
-                                {{auth()->user()->name}}
+                                {{ auth()->user()->name }}
                             </h5>
                             <div class="h5 font-weight-300">
-                                <i class="ni location_pin mr-2"></i>{{auth()->user()->gender}}
+                                <i class="ni location_pin mr-2"></i>{{ auth()->user()->gender }}
                             </div>
                             <div class="h5 mt-4">
-                                <i class="fa fa-envelope" aria-hidden="true"></i> {{auth()->user()->email}}
+                                <i class="fa fa-envelope" aria-hidden="true"></i> {{ auth()->user()->email }}
                             </div>
                             <div>
-                                <i class="fa fa-home" aria-hidden="true"></i> {{auth()->user()->address_home}}
+                                <i class="fa fa-home" aria-hidden="true"></i> {{ auth()->user()->address_work }}
+                            </div>
+                            <div>
+                                <i class="fa fa-phone" aria-hidden="true"></i> {{ auth()->user()->phone_number_work }}
                             </div>
                         </div>
                     </div>
