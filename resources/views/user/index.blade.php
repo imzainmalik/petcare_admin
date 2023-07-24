@@ -7,6 +7,7 @@
     </style>
 
     <div class="header bg-primary pb-6">
+    <div class="header pb-6">
         <div class="container-fluid">
             <div class="header-body">
                 <div class="row align-items-center py-4">
@@ -323,5 +324,341 @@
                 </div>
             </div>
         </div>
+        <div class="card-deck flex-column flex-xl-row">
+
+            <div class="card">
+
+                <div class="card-header">
+
+                    <h5 class="h3 mb-0">Team members</h5>
+                </div>
+
+                <div class="card-body">
+
+                    <ul class="list-group list-group-flush list my--3">
+                        <li class="list-group-item px-0">
+                            <div class="row align-items-center">
+                                <div class="col-auto">
+
+                                    <a href="#" class="avatar rounded-circle">
+                                        <img alt="Image placeholder" src="../../assets/img/theme/team-1.jpg">
+                                    </a>
+                                </div>
+                                <div class="col ml--2">
+                                    <h4 class="mb-0">
+                                        <a href="#!">John Michael</a>
+                                    </h4>
+                                    <span class="text-success">●</span>
+                                    <small>Online</small>
+                                </div>
+                                <div class="col-auto">
+                                    <button type="button" class="btn btn-sm btn-primary">Add</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item px-0">
+                            <div class="row align-items-center">
+                                <div class="col-auto">
+
+                                    <a href="#" class="avatar rounded-circle">
+                                        <img alt="Image placeholder" src="../../assets/img/theme/team-2.jpg">
+                                    </a>
+                                </div>
+                                <div class="col ml--2">
+                                    <h4 class="mb-0">
+                                        <a href="#!">Alex Smith</a>
+                                    </h4>
+                                    <span class="text-warning">●</span>
+                                    <small>In a meeting</small>
+                                </div>
+                                <div class="col-auto">
+                                    <button type="button" class="btn btn-sm btn-primary">Add</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item px-0">
+                            <div class="row align-items-center">
+                                <div class="col-auto">
+
+                                    <a href="#" class="avatar rounded-circle">
+                                        <img alt="Image placeholder" src="../../assets/img/theme/team-3.jpg">
+                                    </a>
+                                </div>
+                                <div class="col ml--2">
+                                    <h4 class="mb-0">
+                                        <a href="#!">Samantha Ivy</a>
+                                    </h4>
+                                    <span class="text-danger">●</span>
+                                    <small>Offline</small>
+                                </div>
+                                <div class="col-auto">
+                                    <button type="button" class="btn btn-sm btn-primary">Add</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item px-0">
+                            <div class="row align-items-center">
+                                <div class="col-auto">
+
+                                    <a href="#" class="avatar rounded-circle">
+                                        <img alt="Image placeholder" src="../../assets/img/theme/team-4.jpg">
+                                    </a>
+                                </div>
+                                <div class="col ml--2">
+                                    <h4 class="mb-0">
+                                        <a href="#!">John Michael</a>
+                                    </h4>
+                                    <span class="text-success">●</span>
+                                    <small>Online</small>
+                                </div>
+                                <div class="col-auto">
+                                    <button type="button" class="btn btn-sm btn-primary">Add</button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+
+                <div class="card-header">
+
+                    <h5 class="h3 mb-0">To do list</h5>
+                </div>
+
+                <div class="card-body p-0">
+
+                    <ul class="list-group list-group-flush" data-toggle="checklist">
+                        <li class="checklist-entry list-group-item flex-column align-items-start py-4 px-4">
+                            <div class="checklist-item checklist-item-success checklist-item-checked">
+                                <div class="checklist-info">
+                                    <h5 class="checklist-title mb-0">Call with Dave</h5>
+                                    <small>10:30 AM</small>
+                                </div>
+                                <div>
+                                    <div class="custom-control custom-checkbox custom-checkbox-success">
+                                        <input class="custom-control-input" id="chk-todo-task-1" type="checkbox"
+                                            checked="">
+                                        <label class="custom-control-label" for="chk-todo-task-1"></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="checklist-entry list-group-item flex-column align-items-start py-4 px-4">
+                            <div class="checklist-item checklist-item-warning">
+                                <div class="checklist-info">
+                                    <h5 class="checklist-title mb-0">Lunch meeting</h5>
+                                    <small>10:30 AM</small>
+                                </div>
+                                <div>
+                                    <div class="custom-control custom-checkbox custom-checkbox-warning">
+                                        <input class="custom-control-input" id="chk-todo-task-2" type="checkbox">
+                                        <label class="custom-control-label" for="chk-todo-task-2"></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="checklist-entry list-group-item flex-column align-items-start py-4 px-4">
+                            <div class="checklist-item checklist-item-info">
+                                <div class="checklist-info">
+                                    <h5 class="checklist-title mb-0">Argon Dashboard Launch</h5>
+                                    <small>10:30 AM</small>
+                                </div>
+                                <div>
+                                    <div class="custom-control custom-checkbox custom-checkbox-info">
+                                        <input class="custom-control-input" id="chk-todo-task-3" type="checkbox">
+                                        <label class="custom-control-label" for="chk-todo-task-3"></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="checklist-entry list-group-item flex-column align-items-start py-4 px-4">
+                            <div class="checklist-item checklist-item-danger checklist-item-checked">
+                                <div class="checklist-info">
+                                    <h5 class="checklist-title mb-0">Winter Hackaton</h5>
+                                    <small>10:30 AM</small>
+                                </div>
+                                <div>
+                                    <div class="custom-control custom-checkbox custom-checkbox-danger">
+                                        <input class="custom-control-input" id="chk-todo-task-4" type="checkbox"
+                                            checked="">
+                                        <label class="custom-control-label" for="chk-todo-task-4"></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+
+                <div class="card-header">
+
+                    <h5 class="h3 mb-0">Progress track</h5>
+                </div>
+
+                <div class="card-body">
+
+                    <ul class="list-group list-group-flush list my--3">
+                        <li class="list-group-item px-0">
+                            <div class="row align-items-center">
+                                <div class="col-auto">
+
+                                    <a href="#" class="avatar rounded-circle">
+                                        <img alt="Image placeholder" src="../../assets/img/theme/bootstrap.jpg">
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <h5>Argon Design System</h5>
+                                    <div class="progress progress-xs mb-0">
+                                        <div class="progress-bar bg-orange" role="progressbar" aria-valuenow="60"
+                                            aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item px-0">
+                            <div class="row align-items-center">
+                                <div class="col-auto">
+
+                                    <a href="#" class="avatar rounded-circle">
+                                        <img alt="Image placeholder" src="../../assets/img/theme/angular.jpg">
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <h5>Angular Now UI Kit PRO</h5>
+                                    <div class="progress progress-xs mb-0">
+                                        <div class="progress-bar bg-green" role="progressbar" aria-valuenow="100"
+                                            aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item px-0">
+                            <div class="row align-items-center">
+                                <div class="col-auto">
+
+                                    <a href="#" class="avatar rounded-circle">
+                                        <img alt="Image placeholder" src="../../assets/img/theme/sketch.jpg">
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <h5>Black Dashboard</h5>
+                                    <div class="progress progress-xs mb-0">
+                                        <div class="progress-bar bg-red" role="progressbar" aria-valuenow="72"
+                                            aria-valuemin="0" aria-valuemax="100" style="width: 72%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item px-0">
+                            <div class="row align-items-center">
+                                <div class="col-auto">
+
+                                    <a href="#" class="avatar rounded-circle">
+                                        <img alt="Image placeholder" src="../../assets/img/theme/react.jpg">
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <h5>React Material Dashboard</h5>
+                                    <div class="progress progress-xs mb-0">
+                                        <div class="progress-bar bg-teal" role="progressbar" aria-valuenow="90"
+                                            aria-valuemin="0" aria-valuemax="100" style="width: 90%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer pt-0">
+            <div class="row align-items-center justify-content-lg-between">
+                <div class="col-lg-6">
+                    <div class="copyright text-center  text-lg-left  text-muted">
+                        © 2021 <a href="https://www.creative-tim.com/" class="font-weight-bold ml-1"
+                            target="_blank">Creative Tim</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <ul class="nav nav-footer justify-content-center justify-content-lg-end">
+                        <li class="nav-item">
+                            <a href="https://www.creative-tim.com/" class="nav-link" target="_blank">Creative Tim</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://www.creative-tim.com/presentation" class="nav-link" target="_blank">About
+                                Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="http://blog.creative-tim.com/" class="nav-link" target="_blank">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://www.creative-tim.com/license" class="nav-link"
+                                target="_blank">License</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
     </div>
+    {{-- <div class="header pb-6">
+        <div class="container-fluid">
+            <div class="header-body">
+                <div class="row align-items-center py-4">
+                    <div class="col-lg-6 col-7">
+                        <h6 class="h2 d-inline-block mb-0">User Booking</h6>
+                        <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
+                            <ol class="breadcrumb breadcrumb-links">
+                                <li class="breadcrumb-item"><a href="{{ route('admin.home') }}">Dashboards</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Booking</li>
+                            </ol>
+                        </nav>
+                    </div>
+                    <div class="col-lg-6 col-5 text-right">
+                        <a href="{{ route('admin.pets_add') }}" class="btn btn-sm btn-outline-primary"><i class="fa fa-plus-circle mr-2"></i>Create New Booking</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid mt--6">
+        <div class="row">
+            <div class="col-xl-12 col-md-12">
+                <div class="table-responsive py-4">
+                    <table id="datatable-buttons" class="table table-flush">
+                        <thead>
+                            <tr>
+                                <th>Pet Name</th>
+                                <th>Pet Owner</th>
+                                <th>CreatedAt</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{-- @foreach ($pets as $pet) --}}
+                                {{-- @php
+                                    $client = App\Models\User::where('id', $pet->client_id)->first();
+                                @endphp --}}
+                                <tr role="row">
+                                    <td>{{--  --}}</td>
+                                    <td>{{--  --}}</td>
+                                    <td>{{--  --}}</td>
+                                    <td><a href=""
+                                            class="btn btn-outline-success"><i class="fa fa-eye"></i></a>
+                                            <a href=""
+                                            class="btn btn-outline-primary"><i class="fa fa-pencil-alt"></i></a>
+                                            <a href=""
+                                            class="btn btn-outline-danger"><i class="fa fa-trash-alt"></i></a></td>
+                                </tr>
+                            {{-- @endforeach --}}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div> --}}
 @endsection

@@ -13,4 +13,14 @@ class Category extends Model
         'name',
         '_token'
     ];
+
+    public function services()
+    {
+        return $this->hasMany(Service::class);
+    }
+
+    public function pets()
+    {
+        return $this->hasMany(Pet::class);
+    }
 }

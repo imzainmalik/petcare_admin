@@ -10,6 +10,14 @@ class Pet extends Model
 {
     use HasFactory;
 
+    public function services()
+    {
+        return $this->hasMany(Service::class);
+    }
 
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
  
 }

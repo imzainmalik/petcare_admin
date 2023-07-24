@@ -232,7 +232,7 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="https://demos.creative-tim.com/argon-dashboard-pro-bs4/pages/tables/datatables.html"
+                                    <a href="{{route('user-booking.index')}}"
                                         class="nav-link">
                                         <span class="sidenav-mini-icon"> D </span>
                                         <span class="sidenav-normal"> Datatables </span>

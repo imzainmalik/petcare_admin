@@ -11,6 +11,11 @@ use Stripe\StripeClient;
 class UserController extends Controller
 {
 
+    public function __construct()
+    {
+        $this->middleware('user');
+    }
+    
     public function index()
     {
         $services = Service::where('is_available', 1)->get();
@@ -39,5 +44,10 @@ class UserController extends Controller
         //     "description" => "Test payment from pet care boooking.",
         // ]);
 
+        }
+    
+    public function home(){
+        return view('user.home');
     }
+    
 }
