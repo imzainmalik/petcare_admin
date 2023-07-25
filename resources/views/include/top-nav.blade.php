@@ -214,7 +214,7 @@
                                 <img alt="Image placeholder" src="{{ asset('images/' . auth()->user()->avatar) }}">
                             </span>
                             <div class="media-body  ml-2  d-none d-lg-block">
-                                <span class="mb-0 text-sm  font-weight-bold">{{auth()->user()->name}}</span>
+                                <span class="mb-0 text-sm  font-weight-bold text-white">{{auth()->user()->name}}</span>
                             </div>
                         </div>
                     </a>
@@ -226,7 +226,7 @@
                             <i class="ni ni-single-02"></i>
                             <span>My profile</span>
                         </a>
-                        <a href="#!" class="dropdown-item">
+                        {{-- <a href="#!" class="dropdown-item">
                             <i class="ni ni-settings-gear-65"></i>
                             <span>Settings</span>
                         </a>
@@ -237,7 +237,7 @@
                         <a href="#!" class="dropdown-item">
                             <i class="ni ni-support-16"></i>
                             <span>Support</span>
-                        </a>
+                        </a> --}}
                         <div class="dropdown-divider"></div>
                         <a href="{{ route('logout') }}"
                             class="dropdown-item"onclick="event.preventDefault(); document.getElementById('logout-form').submit();">

@@ -2,8 +2,8 @@
     <div class="scrollbar-inner">
 
         <div class="sidenav-header  d-flex  align-items-center">
-            <a class="navbar-brand" href="javascript:void(0)">
-                <img src="../../assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
+            <a class="navbar-brand" href="{{route('user.home')}}">
+                <img src="../../assets/img/logo-new.png" class="navbar-brand-img" alt="...">
             </a>
             <div class=" ml-auto ">
 
@@ -22,12 +22,11 @@
 
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#navbar-dashboards" data-toggle="collapse" role="button"
-                            aria-expanded="true" aria-controls="navbar-dashboards">
+                        <a class="nav-link active" href="{{route('user.home')}}">
                             <i class="ni ni-shop text-primary"></i>
                             <span class="nav-link-text">Dashboards</span>
                         </a>
-                        <div class="collapse show" id="navbar-dashboards">
+                        {{-- <div class="collapse show" id="navbar-dashboards">
                             <ul class="nav nav-sm flex-column">
                                 <li class="nav-item">
                                     <a href="dashboard.html" class="nav-link">
@@ -42,15 +41,14 @@
                                     </a>
                                 </li>
                             </ul>
-                        </div>
+                        </div> --}}
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#navbar-examples" data-toggle="collapse" role="button"
-                            aria-expanded="false" aria-controls="navbar-examples">
+                        <a class="nav-link" href="{{route('user-booking.index')}}">
                             <i class="ni ni-ungroup text-orange"></i>
-                            <span class="nav-link-text">Examples</span>
+                            <span class="nav-link-text">Booking</span>
                         </a>
-                        <div class="collapse" id="navbar-examples">
+                        {{-- <div class="collapse" id="navbar-examples">
                             <ul class="nav nav-sm flex-column">
                                 <li class="nav-item">
                                     <a href="https://demos.creative-tim.com/argon-dashboard-pro-bs4/pages/examples/pricing.html"
@@ -102,15 +100,14 @@
                                     </a>
                                 </li>
                             </ul>
-                        </div>
+                        </div> --}}
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#navbar-components" data-toggle="collapse" role="button"
-                            aria-expanded="false" aria-controls="navbar-components">
+                        <a class="nav-link" href="#navbar-components">
                             <i class="ni ni-ui-04 text-info"></i>
-                            <span class="nav-link-text">Components</span>
+                            <span class="nav-link-text">Services</span>
                         </a>
-                        <div class="collapse" id="navbar-components">
+                        {{-- <div class="collapse" id="navbar-components">
                             <ul class="nav nav-sm flex-column">
                                 <li class="nav-item">
                                     <a href="https://demos.creative-tim.com/argon-dashboard-pro-bs4/pages/components/buttons.html"
@@ -175,15 +172,14 @@
                                     </div>
                                 </li>
                             </ul>
-                        </div>
+                        </div> --}}
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#navbar-forms" data-toggle="collapse" role="button"
-                            aria-expanded="false" aria-controls="navbar-forms">
+                        <a class="nav-link" href="#navbar-forms">
                             <i class="ni ni-single-copy-04 text-pink"></i>
-                            <span class="nav-link-text">Forms</span>
+                            <span class="nav-link-text">Payment History</span>
                         </a>
-                        <div class="collapse" id="navbar-forms">
+                        {{-- <div class="collapse" id="navbar-forms">
                             <ul class="nav nav-sm flex-column">
                                 <li class="nav-item">
                                     <a href="https://demos.creative-tim.com/argon-dashboard-pro-bs4/pages/forms/elements.html"
@@ -207,9 +203,9 @@
                                     </a>
                                 </li>
                             </ul>
-                        </div>
+                        </div> --}}
                     </li>
-                    <li class="nav-item">
+                    {{-- <li class="nav-item">
                         <a class="nav-link" href="#navbar-tables" data-toggle="collapse" role="button"
                             aria-expanded="false" aria-controls="navbar-tables">
                             <i class="ni ni-align-left-2 text-default"></i>
@@ -286,10 +282,10 @@
                             <i class="ni ni-calendar-grid-58 text-red"></i>
                             <span class="nav-link-text">Calendar</span>
                         </a>
-                    </li>
+                    </li> --}}
                 </ul>
 
-                <hr class="my-3">
+                {{-- <hr class="my-3">
 
                 <h6 class="navbar-heading p-0 text-muted">
                     <span class="docs-normal">Documentation</span>
@@ -329,7 +325,7 @@
                             <span class="nav-link-text">Plugins</span>
                         </a>
                     </li>
-                </ul>
+                </ul> --}}
             </div>
         </div>
     </div>

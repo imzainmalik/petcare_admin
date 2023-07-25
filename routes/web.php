@@ -65,7 +65,7 @@ Route::group(['middleware' => ['user']], function () {
     Route::get('/user/home', [App\Http\Controllers\UserController::class, 'index'])->name('user.home');
     Route::post('/admin/booking_payment/{service_id}', [App\Http\Controllers\UserController::class, 'booking_payment'])->name('user.booking_payment');
     Route::resource('/user-booking', UserBookingController::class);
-    Route::get('/user/home', [UserController::class, 'home'])->name('user.home');
+    // Route::get('/user/home', [UserController::class, 'home'])->name('user.home');
     
 
 

@@ -8,12 +8,15 @@
 </style>
 
 <div class="main-content">
-    <div class="header bg-gradient-primary py-7 py-lg-8 pt-lg-9">
+    <div class="header bg-gradient-primary  text-center">
+        <a class="navbar-brand" href="{{route('user.home')}}">
+            <img src="../../assets/img/logo-new.png" class="navbar-brand-img" alt="...">
+        </a>
         <div class="container">
             <div class="header-body text-center mb-7">
                 <div class="row justify-content-center">
                     <div class="col-xl-5 col-lg-6 col-md-8 px-5">
-                        <h1 class="text-white">Welcome!</h1>
+                        <h1 >Welcome!</h1>
                     </div>
                 </div>
             </div>
@@ -81,13 +84,13 @@
                         </div>
                     </div>
                     <div class="row mt-3">
-                        <div class="col-6">
-                            <a href="{{ route('password.request') }}" class="text-light"><small>Forgot
+                        <div class="col-6 text-left">
+                            <a href="{{ route('password.request') }}" class="text-dark"><small>Forgot
                                     password?</small></a>
                         </div>
-                        <div class="col-6 text-right">
-                            <a href="{{ route('register') }}" class="text-light"><small>Create new account</small></a>
-                        </div>
+                        {{-- <div class="col-6 text-right">
+                            <a href="{{ route('register') }}" class="text-dark"><small>Create new account</small></a>
+                        </div> --}}
                     </div>
                 </div>
             </div>

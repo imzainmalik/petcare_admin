@@ -24,6 +24,7 @@ class UserController extends Controller
 
     public function booking_payment(Request $request, $id)
     {
+        abort(503);
         dd($request->all());
         $service = Service::where('id', $id)->first();
         Stripe::setApiKey('sk_test_51MgDrRGrh32uccZtv5RkDcgMjR3VkO3AmdGu9Jmp6miqCLx4oYBYWnRezpRYD4PlHlZGCDsr0KgZZlwtodEByEc500IZAO9K6S');
